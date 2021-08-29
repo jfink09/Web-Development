@@ -171,13 +171,35 @@ h1 {
 
 .more-about {
     background-color: rgb(245,245,245);
-    height: 1000px;
+    height: auto;
     padding: 5%;
 }
 
 .more {
     font-size: 20px;
     color: #000000;
+}
+
+#span {
+    display: none;
+}
+
+.button {
+    width: 15%;
+    font-size: 24px;
+    padding: 0.2em;
+    color: #000000;
+    background-color: #4DA8DA;
+    border-radius: 50px;
+    border: none;
+    font-weight: bolder;
+    margin-left: 40%;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #222222;
+    background-color: rgba(77,168,218,0.5);
 }
 
     </style>
@@ -216,7 +238,7 @@ h1 {
         <b>QuestUni</b> was founded in 2020 by three Penn State students in the College of Engineering who wanted to improve the structure of how 
         students can learn about and become <b>connected to undergraduate research</b>. The main way that QuestUni wants to accomplish this is
         throught a different approach than most universities - by providing students with an online platform where they may be helped with 
-        their search for research opportunities based on their <b>interests and career goals</b>.
+        their search for research opportunities based on their <b>interests and career goals</b>.<span id="dots">...</span><span id="span">
         <br>
         <br>
         There is <b>no real structure</b> students can use to find a research opportunity. Typically, students have to do a lot of searching, write many 
@@ -243,11 +265,16 @@ h1 {
         progress their community and the world further. 
         <br>
         <br>
-        This is only the beginning. As QuestUni expands its features and users, it also expands more opportunities for students to <b>network, collaborate, and 
-        become more involved</b> with their peers and school. QuestUni continues to try and <b>bridge any gaps</b> in the ability for students to become their 
-        best selves before they graduate and go on to lead their careers. The future we want, is a future where students find what drives them to do amazing things 
-        in their careers and a future that maximizes the opportunities for students to get involved in things that motivate them while in their college careers. 
+        This is only the beginning. As QuestUni expands its features and users, it also expands more opportunities for students to <b>network, collaborate, and become 
+        more involved</b> with their peers and school. QuestUni continues to try and <b>bridge any gaps</b> in the ability for students to become their best selves before they
+        graduate and go on to lead their careers. The future we want, is a future where students find what drives them to do amazing things in their careers and a 
+        future that maximizes the opportunities for students to get involved in things that motivate them while in their college careers.</span>
     </p>
+
+    <br>
+
+    <button class="button" onclick="myFunction()" id="readmore">Read more</button>
+
 </div>
     
     <div class="team">
@@ -341,3 +368,33 @@ h1 {
 
 </body>
 </html>
+
+<script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("span");
+      var btnText = document.getElementById("readmore");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+      }
+    }
+    </script>
+
+Welcome to QuestUni!
+Thank you for trying QuestUni to find yourself a research opportunity. QuestUni was one of five teams selected for the 2021 Summer Founders Program through Penn State's LaunchBox. Thanks to them, we are able to provide our services completely free! To get started is very easy. 
+
+Visit https://www.questuni.com/. On here you will see a "get started" button. There you will find a form that should take no longer than ten minutes to fill out. On the form, you will be asked questions about yourself and your research interests. We use this information to help you find labs and projects at Penn State most similar to your interests. We will provide you a report of these opportunities along with the steps we recommend you take in order to get a position in research.  As you navigate this process, we will be here to answer any questions or concerns.
+
+On our website, we provide research content full of information about research and what is possible through research. Our content consists of interviews with other Penn State students who are involved in research and interviews with professional scientists, engineers, and physicians who were able to achieve successful careers through research. We also post interesting facts and news about research and blog posts with interesting information about research.
+
+If you have any questions or concerns, please email us at support@questuni.com or contact us on our website. Please feel free to give us any suggestions about posts you would like to see about research!
+
+We are looking forward to help!
+QuestUni
