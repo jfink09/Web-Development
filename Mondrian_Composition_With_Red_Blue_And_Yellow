@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #FFFFFF;
+}
+
+.painting {
+    height: 405px;
+    width: 395px;
+    display: flex;
+    transform: translateY(50%);
+    margin-left: 35%;
+    border: 10px solid #939597;
+}
+
+.box1 {
+    height: 140px;
+    width: 75px;
+    background-color: #E8EAE9;
+    border-bottom: 25px solid #000000;
+    margin-right: -75px;
+}
+
+.box2 {
+    height: 160px;
+    width: 75px;
+    background-color: #E8EAE9;
+    border-bottom: 10px solid #000000;
+    margin-top: 140px;
+}
+
+.box3 {
+    height: 300px;
+    width: 300px;
+    background-color: #C22A25;
+    border-bottom: 10px solid #000000;
+    border-left: 10px solid #000000;
+    margin-right: 75px;
+}
+
+.box4 {
+    height: 85px;
+    width: 85px;
+    background-color: #094689;
+    border-right: 10px solid #000000;
+    margin-top: 300px;
+    margin-left: -450px;
+}
+
+.box5 {
+    height: 85px;
+    width: 270px;
+    background-color: #E8EAE9;
+    border-right: 10px solid #000000;
+    margin-top: 300px;
+}
+
+.box6 {
+    height: 50px;
+    width: 20px;
+    background-color: #E8EAE9;
+    border-bottom: 20px solid #000000;
+    margin-top: 300px;
+}
+
+.box7 {
+    height: 35px;
+    width: 20px;
+    background-color: #D6BB2D;
+    margin-top: 350px;
+    margin-left: -20px;
+}
+
+</style>
+</head>
+
+<body>
+    
+    <div class="painting">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+
+</body>
+</html>
