@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(50, 72, 92, 0.9);
+  margin-left: -8px;
+  margin-top: -8px;
+  height: 80px;
+  width: 1448px;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 28px 16px;
+  text-decoration: none;
+  font-size: 22px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #32485C;}
+
+ul.topnav li a.active {background-color: #32485C; height: 80px;}
+
+ul.topnav li.right {float: right;}
+
+.me {
+    height: 750px;
+    width: 100%;
+}
+
+.me img {
+  position: absolute;
+  height: 750px;
+  width: 1448px;
+  margin-left: -8px;
+}
+
+.aboutme-p {
+  position: absolute;
+  color: #FFFFFF;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  padding: 20px;
+  margin-top: -10px;
+  margin-left: 5%;
+}
+
+.black-box {
+    height: 130px;
+    width: 400px;
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    margin-top: 25%;
+    margin-left: 10%;
+
+}
+
+.aboutme {
+    height: 830px;
+    width: 100%;
+    background-color: #874E4C;
+}
+
+.aboutme-box {
+    height: 500px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 25%;
+    position: absolute;
+    transform: translate(0, 15%);
+}
+
+.aboutme-text {
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    padding: 5%;
+}
+
+.aboutheadingtext {
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 42%;
+    transform: translate(0,40%);
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.questuni-logo {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    margin-left: -35%;
+    margin-top: -65%;
+}
+
+.questuni-logo img {
+    height: 146px;
+    width: 106px;
+    margin-left: 25%;
+    margin-top: 15%;
+}
+
+.swift-logo {
+    height: 200px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 50px;
+    background-color: #FFFFFF;
+    margin-left: -35%;
+    margin-top: 5%;
+}
+
+.swift-logo img {
+    height: 200px;
+    width: 200px;
+}
+
+.myjourney {
+    height: 5000px;
+    width: 100%;
+    background-color: rgb(50, 72, 92);
+}
+
+.journeytextbox {
+    border: #FFFFFF 5px solid;
+    width: 30%;
+    margin-left: 35%;
+    transform: translate(0, 30%);
+}
+
+.journeyheading {
+    color: #FFFFFF;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 20%;
+}
+
+.journey1 {
+    height: 500px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 24%;
+    transform: translate(0,20%);
+
+}
+
+.journey1text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.firstyearclasses {
+    color: #000000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    list-style: upper-roman;
+}
+
+.journeyextra1 {
+    height: 500px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 24%;
+    transform: translate(0,20%);
+
+}
+
+.extra1text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.extra1 {
+    color: #000000;
+    padding: 5%;
+}
+
+.firstyearextra {
+    color: #000000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    list-style: upper-roman;
+}
+
+.journey2 {
+    height: 500px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 24%;
+    transform: translate(0,20%);
+
+}
+
+.journey2text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.secondyearclasses {
+    color: #000000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    list-style: upper-roman;
+}
+
+.journey3 {
+    height: 500px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 24%;
+    transform: translate(0,20%);
+
+}
+
+.journey3text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.thirdyearclasses {
+    color: #000000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    list-style: upper-roman;
+}
+
+.journeyextra2 {
+    height: 500px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 24%;
+    transform: translate(0,20%);
+
+}
+
+.extra2text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.extra2 {
+    color: #000000;
+    padding: 5%;
+}
+
+.secondyearextra {
+    color: #000000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    list-style: upper-roman;
+}
+
+.journeyextra3 {
+    height: 300px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 24%;
+    transform: translate(0,20%);
+
+}
+
+.extra3text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.extra3 {
+    color: #000000;
+    padding: 5%;
+}
+
+.thirdyearextra {
+    color: #000000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    list-style: upper-roman;
+}
+
+.journey4 {
+    height: 550px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 24%;
+    transform: translate(0,20%);
+
+}
+
+.journey4text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.fourthyearclasses {
+    color: #000000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    list-style: upper-roman;
+}
+
+.journeyextra4 {
+    height: 600px;
+    width: 750px;
+    background-color: rgba(255,255,255,0.5);
+    margin-left: 24%;
+    transform: translate(0,20%);
+
+}
+
+.extra4text {
+    color: #000000;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5%;
+}
+
+.extra4 {
+    color: #000000;
+    padding: 5%;
+}
+
+.fourthyearextra {
+    color: #000000;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 5%;
+    list-style: upper-roman;
+}
+
+.mythoughts {
+    height: 4000px;
+    width: 100%;
+    background-color: #F7DFD4;
+    margin-top: 15%;
+}
+
+.thoughtstextbox {
+    border: rgb(50, 72, 92) 5px solid;
+    width: 37%;
+    margin-left: 31%;
+    transform: translate(0, 30%);
+}
+
+.thoughtsheading {
+    color: rgb(50, 72, 92);
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 4%;
+}
+
+.tradingtitle {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 30%;
+    color:rgb(50, 72, 92);
+}
+
+.interestsbox {
+    height: 500px;
+    width: 900px;
+    background-color: rgba(50,72,92,0.2);
+    margin-left: 18%;
+    transform: translate(0,10%);
+}
+
+.interestsbox p {
+    font-size: 18px;
+    color: #000000;
+    padding: 5%;
+}
+
+.ACI {
+    height: 500px;
+    margin-left: 16%;
+    margin-top: 10%;
+}
+
+.entreptitle {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 40%;
+    color:rgb(50, 72, 92);
+}
+
+.interestsbox2 {
+    height: 300px;
+    width: 900px;
+    background-color: rgba(50,72,92,0.2);
+    margin-left: 18%;
+    transform: translate(0,20%);
+}
+
+.interestsbox2 p {
+    font-size: 18px;
+    color: #000000;
+    padding: 5%;
+}
+
+.snowskatetitle {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 31%;
+    color:rgb(50, 72, 92);
+}
+
+.skate {
+    height: 400px;
+    margin-left: 11%;
+}
+
+.snow {
+    height: 400px;
+    margin-right: -11%;
+}
+
+.pianotitle {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 45%;
+    color:rgb(50, 72, 92);
+}
+
+.integrationdiffeq {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 34%;
+    color:rgb(50, 72, 92);
+}
+
+.math {
+    height: 600px;
+    margin-left: 31%;
+}
+
+.connect {
+    height: 600px;
+    width: 100%;
+    background-color: #EABCAC;
+}
+
+.connecttextbox {
+    border: #874E4C 5px solid;
+    width: 31%;
+    margin-left: 32%;
+    transform: translate(0, 30%);
+}
+
+.connectheading {
+    color: #874E4C;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 4%;
+}
+
+.linkedin {
+    height: 200px;
+    margin-left: 32%;
+    margin-top: 10%;
+}
+
+.email {
+    height: 200px;
+    margin-top: 10%;
+}
+
+.bookstext {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin-top: 5%;
+    margin-left: 28%;
+    color:rgb(50, 72, 92);
+}
+
+.booksencompased {
+    margin-left: 20%;
+    margin-top: 3%;
+}
+.books {
+    height: 100px;
+    margin-left: 5%;
+}
+
+</style>
+</head>
+
+
+<body>
+
+    <ul class="topnav">
+        <li><a class="active" href="#aboutme">About Me</a></li>
+        <li><a href="#myjourney">My Journey</a></li>
+        <li><a href="#mythoughts">My Thoughts</a></li>
+        <li><a href="#connect">Connect</a></li>
+    </ul>
+
+    <div class="me">
+
+        <img class="image" src="my1.png" alt="Jason Fink">
+    
+        <div class="black-box">
+            <p class="aboutme-p">Hello, I Am <br>&emsp;&emsp;Jason Fink</p>
+        </div>
+    
+    </div>
+
+<div class="aboutme" id="aboutme">
+
+        <p class="aboutheadingtext">About Me</p>
+
+    <div class="aboutme-box">
+        <p class="aboutme-text">My name is Jason Fink and I am a recent graduate from The Pennsylvania State University with a Bachelor of Science
+            in aerospace engineering while matriculating in pre-medicine. I graduated from the Schreyer Honors College with honors in aerospace engineering.
+            I am currently one of the Co-Founders of QuestUni LLC, a software as a service (Saas) company that helps undergraduate students learn more about, 
+            and get connected to research opportunities more easily by matching them to labs and projects based on their interests and career goals. I am also
+            a satellite flight operations engineer for the NASA Swift mission at the mission operations center in State College, PA. 
+        </p>
+
+    <div class="questuni-logo">
+        <img src="rocket.png" alt="questuni">
+    </div>
+    <div class="swift-logo">
+        <img src="swift.png" alt="questuni">
+    </div>
+
+    </div>
+
+</div>
+
+<div class="myjourney" id="myjourney">
+    <div class="journeytextbox">
+        <p class="journeyheading">My Journey</p>
+    </div>
+
+    <div class="journey1">
+
+        <p class="journey1text">First-Year Courses:
+            <li class="firstyearclasses">KINES 89</li>
+            <li class="firstyearclasses">ENGL 15</li>
+            <li class="firstyearclasses">CHEM 110 (General Chemistry I)</li>
+            <li class="firstyearclasses">CHEM 111 (Experimental General Chemistry Laboratory I)</li>
+            <li class="firstyearclasses">ECON 104 (Macroeconomics)</li>
+            <li class="firstyearclasses">EDSGN 100 (Engineering Design)</li>
+            <li class="firstyearclasses">MATH 140 (Calculus I)</li>
+            <li class="firstyearclasses">CHEM 112 (General Chemistry II)</li>
+            <li class="firstyearclasses">CHEM 113 (Experimental General Chemistry Laboratory II)</li>
+            <li class="firstyearclasses">CMPSC 201C (Programming in C++ and Matlab)</li>
+            <li class="firstyearclasses">MATH 141 (Calculus II)</li>
+            <li class="firstyearclasses">PHYS 211 (Classical Mechanics)</li>
+            <li class="firstyearclasses">EMCH 296 (Undergraduate Research)</li>
+            <li class="firstyearclasses">EMCH 297 (Undergraduate Research)</li>
+        </p>
+
+    </div>
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <div class="journeyextra1">
+
+        <p class="extra1text">First-Year Extracurriculars:
+            <li class="firstyearextra">Undergraduate Research</li>
+            <p class="extra1">Studied the mechanical properties of 3-D printed transtibial prostethic sockets. On this project, we compared 3-D fabrication methods
+                with the convential methods of creating sockets. We measured the strength of different materials (ABS and PLA) and compared their 
+                strength with that of the conventional socket. I had the opportunitiy to present my findings at Penn State Abington's research poster
+                fair as part of their undergraduate research program called ACURA. At this event, we won an honorable mention award. I later presented
+                at the 2018 Biomedical Engineering and Biomechanics Conference at Penn State Berk's campus. On this project, I learned how to performing
+                research, I gained public speaking skills, I learned how to present research findings and how to create a research poster, and learned 
+                how to use Fusion 360 for CAD.
+            </p>
+            <li class="firstyearextra">Tutored students in Calculus</li>
+            <li class="firstyearextra">Tutored students in General Chemistry I</li>
+        </p>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="journey2">
+
+        <p class="journey2text">Second-Year Courses:
+            <li class="secondyearclasses">MATH 230 (Calculus III - Multivariable and Vector)</li>
+            <li class="secondyearclasses">CHEM 210H (Honors Organic Chemistry I)</li>
+            <li class="secondyearclasses">EMCH 211H (Honors Statics)</li>
+            <li class="secondyearclasses">PHYS 212 (Electricity and Magnetism)</li>
+            <li class="secondyearclasses">CHEM 212 (Organic Chemistry II)</li>
+            <li class="secondyearclasses">EMCH 212 (Dynamics)</li>
+            <li class="secondyearclasses">EMCH 213 (Honors Strength of Materials)</li>
+            <li class="secondyearclasses">ME 300 (Thermodynamics)</li>
+        </p>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="journeyextra2">
+
+        <p class="extra2text">Second-Year Extracurriculars:
+            <li class="secondyearextra">Internship</li>
+            <p class="extra2">Took an internship with Triumph Group, an aerospace structures company. As an intern, I analyzed stresses exerted on the aircraft's
+                wing section. For my main project, I developed a tool in VBA for all engineers to use at the company. This tool allowed the user to enter a specific 
+                fastener distribution with fastener properties and showed them a visual representation of the stress distribution. The purpose of this tool allowed
+                the engineer to see where, on their aircraft's part, the greatest stresses are located as this is the location most likely to fail first.
+            </p>
+            <li class="secondyearextra">Took linear algebra at a campus near my internship</li>
+        </p>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+    <div class="journey3">
+
+        <p class="journey3text">Third-Year Courses:
+            <li class="thirdyearclasses">CAS 100B</li>
+            <li class="thirdyearclasses">MATH 220 (Linear Algebra)</li>
+            <li class="thirdyearclasses">AERSP 301 (Aerospace Structures)</li>
+            <li class="thirdyearclasses">AERSP 309 (Astronautics and Orbital Mechanics)</li>
+            <li class="thirdyearclasses">AERSP 311 (Aerodynamics I)</li>
+            <li class="thirdyearclasses">AERSP 313 (Aerospace Analysis)</li>
+            <li class="thirdyearclasses">EMCH 315</li>
+            <li class="thirdyearclasses">EMCH 316</li>
+            <li class="thirdyearclasses">AERSP 304 (Control Systems)</li>
+            <li class="thirdyearclasses">AERSP 305W (Aerospace Technology Lab)</li>
+            <li class="thirdyearclasses">AERSP 306 (Aeronautics)</li>
+            <li class="thirdyearclasses">AERSP 312 (Aerodynamics II)</li>
+            <li class="thirdyearclasses">ASTRO 7N</li>
+            <li class="thirdyearclasses">CHEM 213W (Organic Chemistry Lab)</li>
+            <li class="thirdyearclasses">KINES 12</li>
+            <li class="thirdyearclasses">PSYCH 100</li>
+        </p>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="journeyextra3">
+
+        <p class="extra3text">Third-Year Extracurriculars:
+            <li class="thirdyearextra">First Startup That Failed</li>
+            <p class="extra3">My roomate and I worked on developing a medical device that tracked every aspect of a human during sleep. This product was meant
+                for people who have sleep apnea. Our design for the product utilized flexible circuits and was to be used as a bracelet. The design was simplistic
+                and comfortable. We were unable to continue this project due to the cost of patenting the technology and the cost to gain FDA approval.
+            </p>
+        </p>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+
+        <div class="journey4">
+
+            <p class="journey4text">Fourth-Year Courses:
+                <li class="fourthyearclasses">BIOL 110 (Biology)</li>
+                <li class="fourthyearclasses">BIOL 141 (Physiology)</li>
+                <li class="fourthyearclasses">ENGL 202C</li>
+                <li class="fourthyearclasses">HIST 203</li>
+                <li class="fourthyearclasses">AERSP 401A (Spacecraft Design I)</li>
+                <li class="fourthyearclasses">AERSP 410 (Aerospace Propulsion)</li>
+                <li class="fourthyearclasses">AERSP 420 (Flight Testing)</li>
+                <li class="fourthyearclasses">AERSP 450 (Stability and Attitude Control of Spacecraft)</li>
+                <li class="fourthyearclasses">BMB 401 (General Biochemistry I)</li>
+                <li class="fourthyearclasses">SOC 001</li>
+                <li class="fourthyearclasses">AERSP 401B (Aerodynamics II)</li>
+                <li class="fourthyearclasses">BIOL 142 (Physiology Lab)</li>
+                <li class="fourthyearclasses">BMB 251H (Honors Cellular and Molecular Biology)</li>
+                <li class="fourthyearclasses">EE 212</li>
+                <li class="fourthyearclasses">EGEE 101H (Honors Energy and the Environment)</li>
+                <li class="fourthyearclasses">HIST 145N (Honors Holocaust and Human Rights)</li>
+                <li class="fourthyearclasses">PHYS 214 (Wave Motion and Quantum Mechanics)</li>
+                <li class="fourthyearclasses">AERSP 494H (Honors Thesis)</li>
+            </p>
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+        <div class="journeyextra4">
+
+            <p class="extra4text">After Graduation:
+                <li class="fourthyearextra">QuestUni LLC</li>
+             <p class="extra4">My roomates and I were accepted into Penn State's startup accelerator program called the Summer Founders Program where we 
+                 recieved a grant of $15,000 to continue working on the startup after graduation. We offer a service on our website that matches students
+                 to research labs around campus based on their interests and career goals. We also produce content about undergraduate research. We are 
+                 using SEO with our content with the intention of increasing traffic to our website. Our goal is to help students from searching for 
+                 research opportunities, to being successful in the lab. We intend to gain the interest from other universities and companies who are 
+                 interested in hiring students with a research background to post opportunities on the website. We currently have students actively using
+                 our service and we have an interest from the university.
+            </p>
+
+            <li class="fourthyearextra">NASA Swift Satellite Operations Engineer</li>
+             <p class="extra4">Working for the NASA Swift mission as a satellite operations engineer at the mission control center. I send commands up to
+                 the spacecraft for it to collect scientific data for its instruments: BAT, UVOT, XRT (all telecopes). I schedule ground station and TDRSS
+                 passes and communicate with other stations. I assist the team in amerliorating spacecraft anomalies. I manage realtime passes and handle 
+                 realtime telemetry data. The satellite detects gamma-ray bursts which are thought to initiate the formation of black holes. 
+            </p>
+
+        </p>
+
+    </div>
+
+    <div class="mythoughts" id="mythoughts">
+
+        <div class="thoughtstextbox">
+            <p class="thoughtsheading">My Personal Interests</p>
+        </div>
+    
+        <p class="tradingtitle">Swing Trading and Options for Income</p>
+    
+        <div class="interestsbox">
+            <p class="mythoughtstext">
+                I have a personal interest in trading financial securities and derivatives. My two current strategies find an edge in the market through swing 
+                trading underlying stocks and selling option premium. I use a technofundamental approach to swing trading involving William O'Neil's CAN SLIM
+                methodolgy and Stan Weinstein's stage analysis. Regardless of the company's fundamentals, the chart needs to follow certain technical analysis
+                and price action. Most of my swing trades take advantage of momentum in the price caused by increasing earnings, revenues, and sales as well as 
+                a period of price consolidation with little volume activity indicating little selling. I try finding volatility contraction patterns (VCPs),
+                a pattern discovered by Mark Minervini. These show tightening of the price acion with each dip getting smaller and tighter under a standard pivot.
+                Specific indicators I like to use as potential support advantage resistance levels are the 5EMA, 10EMA, 21EMA, 50SMA, 150SMA, 200SMA, Bollinger Bands, 
+                the Webby RSI, Daryl Guppy's Guppy indicator (GMMA), a 50 day rolling average for volume, and Dr. Eric Wish's green dot indicator. I also overlay the 
+                SPY chart to determine relative strength in a specific underlying versus the strength of the market. My options strategy involves selling premium by 
+                taking advantage of theta decay in 45DTE contracts as well as high implied volatility (IV) environments. Below is an example of a trade I took 
+                following my rules.
+            </p>
+        </div>
+
+        <img class="ACI" src="ACI.png" alt="ACI Stock Chart">
+
+        <p class="entreptitle">Entrepreneurship</p>
+
+    <div class="interestsbox2">
+        <p>
+            I have a have a passion for entrepreneurship, startups, and innovation. I believe that entrepreneurship and innovation provides an 
+            environment where real problems get solved. Innovation changes the world and brings humanity to a better, more exciting future. My 
+            philosophy for running a business is to focus on the employees' wellbeing and lead them through the process. With happy and motivated 
+            employees, more can be achieved, better work is done, people are excited and look forward to being there, and the customer's happiness is 
+            maximized. Many entrepreneurs inspire me to work on solving important problems and provide something valuable for humanity. This is one 
+            reason why I started working on my own startup called QuestUni LLC.</p>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <p class="snowskatetitle">Snowboarding and Skateboarding</p>
+
+    <br>
+    <br>
+
+        <img class="skate" src="Skate.png" alt="skate">
+        <img class="snow" src="Snow.png" alt="snow">
+
+        <p class="pianotitle">Piano</p>
+        <p class="integrationdiffeq">Solving Advanced Integrals</p>
+
+        <img class="math" src="Math.png" alt="math">
+
+            <p class="bookstext">
+                Here is a list of recommended readings:
+            </p>
+
+        <div class="booksencompased">
+            <img class="books" src="chartpatterns.png" alt="chartpatterns">
+            <img class="books" src="minervini.png" alt="minervini">
+            <img class="books" src="conn.png" alt="conn">
+            <img class="books" src="oneil.png" alt="oneil">
+            <img class="books" src="options.png" alt="options">
+            <img class="books" src="stan.png" alt="stan">
+        </div>
+
+    </div>
+
+    <div class="connect" id="connect">
+
+        <div class="connecttextbox">
+            <p class="connectheading">Connect With Me!</p>
+        </div>
+    
+        <a href="https://linkedin.com/in/jason-fink-a7aa19170">
+        <img class="linkedin" src="linkedin.png" alt="linkedin">
+        </a>
+
+        <a href="mailto:jasonfink09@gmail.com">
+        <img class="email" src="email2.png" alt="email">
+        </a>
+
+</body>
+</html>
