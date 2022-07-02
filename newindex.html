@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<title>Home</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+<head>
+    <style>
+
+body {
+    background-color: #0f2f3b;
+}
+
+h1 {
+    font-size: 52px;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    text-align: center;
+    color: #e9f9ff;
+}
+
+.container {
+            display: flex;
+            flex-direction: row;
+            justify-content: left;
+            align-items: left;
+            padding: 30px;
+        }
+
+#input {
+  width: 40vw;
+  height: 6vh;
+  margin: 10vh 0 0 5vw;
+  outline: none;
+  border: 2px solid #0f2f3b;
+  border-radius: 1em 2em 3em 1em;
+  padding-left: 10px;
+  color: #e9f9ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: #0f2f3b;
+  display: inline-block;
+  /*box-shadow: -3px -3px 7px rgba(94,104,121,0.288), 3px 3px 7px #3c424546;*/
+  /*box-shadow:  5px 5px 10px #0c252e,
+             -5px -5px 10px #123948;*/
+  box-shadow:  5px 5px 10px #0d2732,
+             -5px -5px 10px #113744;
+}
+
+#daily-input {
+  width: 50%;
+  height: 5vh;
+  margin: 0 0 0 2vw;
+  outline: none;
+  /*border: 2px solid #0f2f3b;*/
+  border: none;
+  border-radius: 1em 2em 3em 1em;
+  padding-left: 10px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  background-color: #dde1e7;
+  display: inline-block;
+  box-shadow:  -3px -3px 7px #ffffff73,
+                3px 3px 5px rgba(94,104,121,0.288);
+}
+
+::placeholder {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+#button {
+  margin: 10vh 0 0 2vw;
+  background-color: #0f2f3b;
+  border: 2px solid #0f2f3b;
+  color: #e9f9ff;
+  height: 6vh;
+  width: 100px;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  box-shadow:  5px 5px 10px #0d2732,
+             -5px -5px 10px #113744;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#button:hover {
+  cursor: pointer;
+}
+
+#button:active {
+    box-shadow: inset 5px 5px 10px #0d2732, 
+                inset -5px -5px 10px #113744;
+    cursor: pointer;
+  }
+
+.button-font {
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.25em;
+  margin: 1.5vh 0 0 0.4vw;
+}
+
+/*.arrow-body {
+  position: relative;
+  float: right;
+  margin: 13vh 8% 0 0;
+  height: 15px;
+  width: 5%;
+  background-color: #e9f9ff;
+}
+
+.arrow-head {
+  position: relative;
+  float: right;
+  margin: -3% 13% 0 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid #e9f9ff;
+  border-bottom: 20px solid transparent;
+  border-top: 20px solid transparent;
+}*/
+
+.input-explaination {
+  width: 350px;
+  height: 200px;
+  color: #e9f9ff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  text-align: justify;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 0 10vw;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  gap: 5px;
+  padding: 5px;
+  width: 80%;
+  margin: 10vh auto 0 auto;
+}
+
+.grid-container > div {
+  /*background-color: rgba(255, 255, 255, 0.8);*/
+  background-color: #0f2f3b;
+  text-align: center;
+  padding: 1px 0;
+  font-size: 20px;
+  border-radius: 50%;
+  height: 22.5px;
+  width: 25px;
+  box-shadow: inset 5px 5px 10px #0d2732, 
+                inset -5px -5px 10px #113744;
+}
+
+.grid-container > div:hover {
+  cursor: pointer;
+}
+
+.colorpicker {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin: 5vh 0 0 0;
+  -webkit-appearance: none;
+}
+
+#colorpicker::-webkit-color-swatch-wrapper {
+    padding: 0; 
+}
+#colorpicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 50%;
+}
+
+label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  margin: 0 0 0 5vw;
+  color: #e9f9ff;
+  display: inline-block;
+}
+
+#modal-footer-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 1vh 0 0 0;
+  color: #000;
+  display: inline-block;
+}
+
+#modal-input-button {
+  display: inline-block;
+  background-color: #dde1e7;
+  color: #000;
+  height: 5vh;
+  width: 100px;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block;
+  margin: 0 0 0 2vw;
+  box-shadow:  -3px -3px 7px #ffffff73,
+                3px 3px 5px rgba(94,104,121,0.288);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.modal-button-font {
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  margin: 1.25vh 0 0 1vw;
+}
+
+#modal-input-button:hover {
+  cursor: pointer;
+}
+
+#modal-input-button:active {
+    box-shadow: inset -3px -3px 7px #ffffff73,
+                inset 3px 3px 5px rgba(94,104,121,0.288);
+    cursor: pointer;
+  }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  position: relative;
+  background-color: #dde1e7;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  overflow: auto;
+  margin-bottom: 20vh;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.5s;
+  animation-name: animatetop;
+  animation-duration: 0.5s
+}
+
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+.close {
+  color: #FF0000;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #b93939;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #dde1e7;
+  color: #000;
+  border-bottom: 3px solid #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.modal-body {
+	padding: 10px 16px 0 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #dde1e7;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: left;
+}
+
+.remove {
+  background-color: #dde1e7;
+  border: none;
+  color: #FF0000;
+  font-size: 20px;
+  margin: 0 0 0 1vw;
+  box-shadow:  -3px -3px 7px #ffffff73,
+                3px 3px 5px rgba(94,104,121,0.288);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.remove:hover {
+  cursor: pointer;
+}
+
+.remove:active {
+    box-shadow:  inset -3px -3px 7px #ffffff73,
+                 inset 3px 3px 5px rgba(94,104,121,0.288);
+    cursor: pointer;
+  }
+
+    </style>
+</head>
+
+<body>
+
+    <h1><b>Some Title Goes Here</b></h1>
+
+    <div class="container">
+    <input id="input" type="text">
+    <div id="button" onclick="fillData()">
+      <p class="button-font">Add Task</p>
+    </div>
+    <div class="input-explaination" id="input-explaination">
+      <p>
+        Type in each task you completed toward your productivity goals. They will
+        be automatically added to today's circle and a the color will fill based on
+        the number of tasks you did in comparison to other days' productivity.
+      </p>
+    </div>
+    <!--This line only works if you want to only have one input and be able to update it: onclick="document.querySelector('#modal-body').innerHTML = document.querySelector('#input').value"-->
+    </div>
+
+    <!--<div class="arrow-body"></div>
+    <div class="arrow-head"></div>-->
+
+    <div id="grid-container" class="grid-container"></div>
+
+      <label>Choose Your Color:</label>
+      <input type="color" id="colorpicker" class="colorpicker" value="#FFFFFF">
+
+
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2 id="inner-header"></h2>
+          </div>
+          <div class="modal-body" id="modal-body"></div>
+          <div class="modal-footer">
+            <label id="modal-footer-label">Your Tasks:</label>
+            <input id="daily-input" type="text" placeholder="Add Task...">
+            <div id="modal-input-button" onclick="fillData()">
+              <p class="modal-button-font">Add Task</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+<script>
+         
+$(document).ready(function(){
+      $("#colorpicker").change(function(){
+          var color = $(this).val();
+          $(".grid-container > div").css("background-color",color);
+      });
+  });
+
+document.body.onload = addDays;
+
+function addDays () {
+
+var container = document.getElementById("grid-container");
+
+var html = "";
+
+for(var i = 1; i <= 365; i++) {
+    html += "<div id='"+ i +"' onclick=\"showModal("+i+")\"></div>"
+}
+
+container.innerHTML = html;
+
+}
+
+var modal = document.getElementById("myModal");
+
+function showModal(i) {
+
+var date = new Date(2022, 0, i);
+
+date = ((date.getMonth() > 8) ? (date.getMonth() + 1) : ('0' + (date.getMonth() + 1))) + '/' + ((date.getDate() > 9) ? date.getDate() : ('0' + date.getDate())) + '/' + date.getFullYear()
+
+//var day = document.getElementById(toString(i));
+var header = document.getElementById("inner-header");
+var footer = document.getElementById("modal-footer");
+
+header.innerHTML = "" + date + " Accomplishments";
+
+modal.style.display = "block";
+
+}
+
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+let fillData = () => {
+        var ele = document.getElementById('modal-body');
+// this loop?
+        for(var i = 1; i <= 365; i++) {
+          ele += "<div id='"+ i +"'></div>"
+        }
+        var textModal = document.getElementById('modal-body').innerHTML += document.getElementById('daily-input').value + '<button class="remove" onclick="remove()">&times;</button>' + '<br><br>';
+        //var text = document.getElementById('daily-input').value;
+        ele.innerHTML += textModal + '<button class="remove" onclick="remove()">&times;</button>' + '<br><br>';
+    }
+
+
+const d = new Date();
+d.setFullYear(2022, 0, 1);
+//document.getElementById("1") = d;
+
+
+</script>
+
+</body>
+</html>
